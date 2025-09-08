@@ -1,13 +1,27 @@
-import Navlink from './components/Navlink';
-import './App.css';
+
+
+// app.js
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navlink from "./components/Navlink";
+import Insights from "./pages/Insights";
+import Products from "./pages/Products";
 
 function App() {
   return (
-    <div >
+    <Router>
+      <div className="flex">
+        {/* Sidebar */}
+        <Navlink />
 
-     <Navlink/>
-      
-    </div>
+        {/* Main Content */}
+        <div className="flex-1 p-6">
+          <Routes>
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/products" element={<Products />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 

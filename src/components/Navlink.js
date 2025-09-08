@@ -1,5 +1,9 @@
+
+
+// Navlink.js
 import '../App.css';
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Insights from '../pages/Insights';
 import Products from '../pages/Products';
@@ -14,9 +18,16 @@ import Products from '../pages/Products';
 
 export default function Navlink() {
   const [openMenu, setOpenMenu] = useState(null);
+  const [sopenMenu, setsOpenMenu] = useState(null);
+
 
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
+  };
+
+
+  const togglesMenu = (smenu) => {
+    setsOpenMenu(sopenMenu === smenu ? null : smenu);
   };
 
   return (
@@ -29,25 +40,23 @@ export default function Navlink() {
       {/* Menu */}
       <nav className="flex-1 overflow-y-auto p-2">
         <ul className="space-y-1">
-          <li>
-            <a
-              href="#"
-              className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
+         <li>
+            <Link
+                to="/insights"
+                className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
             >
-              <Insights size={20} />
-               Insights
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
+                Insights
+            </Link>
+            </li>
+
+            <li>
+            <Link
+                to="/products"
+                className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
             >
-               <Products size={20} 
-              />  
-              Products
-            </a>
-          </li>
+                Products
+            </Link>
+            </li>
               <li>
             <button
               onClick={() => toggleMenu("ecommerce")}
@@ -88,7 +97,7 @@ export default function Navlink() {
           </li>
           <li>
             <button
-              onClick={() => toggleMenu("ecommerce")}
+              onClick={() => togglesMenu("ecommerce")}
               className="w-full flex items-center justify-between p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
             >
               <span className="flex items-center gap-3">
@@ -102,7 +111,7 @@ export default function Navlink() {
                 }`}
               /> */}
             </button>
-            {openMenu === "ecommerce" && (
+            {sopenMenu === "ecommerce" && (
               <ul className="ml-8 mt-1 space-y-1 text-sm text-gray-600">
                 <li>
                   <a
@@ -151,3 +160,7 @@ export default function Navlink() {
     </div>
   );
 }
+
+
+
+//
