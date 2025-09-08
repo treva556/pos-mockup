@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import Navlink from './components/Navlink';
 import './App.css';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
           rel="noopener noreferrer"
         >
             </a> */}
+            <Navlink/>
          <p>  Point of Sale Mockup</p> 
       
       </header>

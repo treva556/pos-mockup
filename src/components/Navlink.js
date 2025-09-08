@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import '../App.css';
 
-function App() {
+function Navlink() {
   return (
     <div className="">
      
 
      <h1 className="text-3xl font-bold underline">
-      Hello world!
+      dashboard here
      </h1>
     </div>
   );
 }
 
-export default App;
-
+export default Navlink;
+//
 
