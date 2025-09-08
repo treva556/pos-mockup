@@ -12,4 +12,4 @@ function Categories() {
   );
 }
 
-export default categories;
+export default Categories;

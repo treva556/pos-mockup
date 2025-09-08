@@ -5,11 +5,8 @@ function App() {
   return (
     <div >
 
- 
-            <Navlink/>
-         <p>  Point of Sale Mockup</p> 
+     <Navlink/>
       
-     
     </div>
   );
 }

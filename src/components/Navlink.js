@@ -1,29 +1,8 @@
 import '../App.css';
 import React, { useState } from "react";
-// import {
-//   Home,
-//   BarChart,
-//   ShoppingCart,
-//   Users,
-//   Settings,
-//   ChevronDown,
-// } from "lucide-react";
-// function Navlink() {
-//   return (
-//     <div className="">
-     
 
-//      <h1 className="text-3xl font-bold underline">
-//       dashboard here
-//      </h1>
-//     </div>
-//   );
-// }
-
-// export default Navlink;
-// //
-
-// import { useState } from "react";
+import Insights from '../pages/Insights';
+import Products from '../pages/Products';
 // import {
 //   Home,
 //   BarChart,
@@ -55,7 +34,7 @@ export default function Navlink() {
               href="#"
               className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
             >
-              {/* <Home size={20} /> */}
+              <Insights size={20} />
                Insights
             </a>
           </li>
@@ -64,9 +43,8 @@ export default function Navlink() {
               href="#"
               className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
             >
-              {/* <BarChart  */}
-              {/* size={20} 
-              />  */}
+               <Products size={20} 
+              />  
               Products
             </a>
           </li>

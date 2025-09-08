@@ -1,13 +1,14 @@
+//
 // prods
 // import Navlink from './components/Navlink';
 import '../App.css';
 
-function Products() {
+function Insights() {
   return (
     <div>
-        Products Page
+        Insights page
     </div>
   );
 }
 
-export default Products;
+export default Insights;
