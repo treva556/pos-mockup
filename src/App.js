@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navlink from "./components/Navlink";
 import Insights from "./pages/Insights";
 import Products from "./pages/Products";
+import Stock from "./pages/Stock";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Routes>
             <Route path="/insights" element={<Insights />} />
             <Route path="/products" element={<Products />} />
+           <Route path="/stock" element={<Stock />} />
+
           </Routes>
         </div>
       </div>

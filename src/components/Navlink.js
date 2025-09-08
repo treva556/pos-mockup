@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 import Insights from '../pages/Insights';
 import Products from '../pages/Products';
+import Stock from '../pages/Stock';
 // import {
 //   Home,
 //   BarChart,
@@ -57,6 +58,19 @@ export default function Navlink() {
                 Products
             </Link>
             </li>
+             <li>
+            <Link
+                to="/stock"
+                className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
+            >
+                Stock
+            </Link>
+            </li>
+
+
+
+
+
               <li>
             <button
               onClick={() => toggleMenu("ecommerce")}
