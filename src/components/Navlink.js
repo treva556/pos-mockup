@@ -70,6 +70,44 @@ export default function Navlink() {
               Products
             </a>
           </li>
+              <li>
+            <button
+              onClick={() => toggleMenu("ecommerce")}
+              className="w-full flex items-center justify-between p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
+            >
+              <span className="flex items-center gap-3">
+                {/* <ShoppingCart  */}
+                {/* size={20} /> */}
+                 Products
+              </span>
+              {/* <ChevronDown
+                className={`transition-transform ${
+                  openMenu === "ecommerce" ? "rotate-180" : ""
+                }`}
+              /> */}
+            </button>
+            {openMenu === "ecommerce" && (
+              <ul className="ml-8 mt-1 space-y-1 text-sm text-gray-600">
+                <li>
+                  <a
+                    href="#"
+                    className="block p-2 rounded hover:bg-indigo-50"
+                  >
+                    Categories
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="block p-2 rounded hover:bg-indigo-50"
+                  >
+                    All Items
+                  </a>
+                </li>
+               
+              </ul>
+            )}
+          </li>
           <li>
             <button
               onClick={() => toggleMenu("ecommerce")}
