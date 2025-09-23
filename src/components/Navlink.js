@@ -160,7 +160,25 @@ export default function Navlink() {
               className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
             >
               {/* <Users size={20} /> */}
-               CRM
+              Profile
+            </a>
+          </li>
+            <li>
+            <a
+              href="#"
+              className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
+            >
+              {/* <Users size={20} /> */}
+               Accounts
+            </a>
+          </li>
+            <li>
+            <a
+              href="#"
+              className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
+            >
+              {/* <Users size={20} /> */}
+             Settings
             </a>
           </li>
          
