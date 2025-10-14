@@ -46,7 +46,7 @@ export default function Navlink() {
                 to="/insights"
                 className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
             >
-                Insights
+                Insights / Reports
             </Link>
             </li>
 
@@ -55,7 +55,7 @@ export default function Navlink() {
                 to="/products"
                 className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
             >
-                Products
+                Customers
             </Link>
             </li>
              <li>
@@ -79,7 +79,7 @@ export default function Navlink() {
               <span className="flex items-center gap-3">
                 {/* <ShoppingCart  */}
                 {/* size={20} /> */}
-                 Products
+                 Suppliers
               </span>
               {/* <ChevronDown
                 className={`transition-transform ${
