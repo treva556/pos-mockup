@@ -50,14 +50,14 @@ export default function Navlink() {
             </Link>
             </li>
 
-            <li>
+            {/* <li>
             <Link
                 to="/products"
                 className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
             >
                 Customers
             </Link>
-            </li>
+            </li> */}
              <li>
             <Link
                 to="/stock"
@@ -67,7 +67,60 @@ export default function Navlink() {
             </Link>
             </li>
 
-
+   <li>
+            <button
+              onClick={() => toggleMenu("ecommerce")}
+              className="w-full flex items-center justify-between p-2 rounded-lg hover:bg-indigo-50 text-gray-700"
+            >
+              <span className="flex items-center gap-3">
+                {/* <ShoppingCart  */}
+                {/* size={20} /> */}
+                 Customers
+              </span>
+              {/* <ChevronDown
+                className={`transition-transform ${
+                  openMenu === "ecommerce" ? "rotate-180" : ""
+                }`}
+              /> */}
+            </button>
+            {openMenu === "ecommerce" && (
+              <ul className="ml-8 mt-1 space-y-1 text-sm text-gray-600">
+                <li>
+                  <a
+                    href="#"
+                    className="block p-2 rounded hover:bg-indigo-50"
+                  >
+                    Create Sales Order
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="block p-2 rounded hover:bg-indigo-50"
+                  >
+                    Create Invoice
+                  </a>
+                </li>
+                  <li>
+                  <a
+                    href="#"
+                    className="block p-2 rounded hover:bg-indigo-50"
+                  >
+                    Enter Sales Receipt
+                  </a>
+                </li>
+                  <li>
+                  <a
+                    href="#"
+                    className="block p-2 rounded hover:bg-indigo-50"
+                  >
+                    Receive payments
+                  </a>
+                </li>
+               
+              </ul>
+            )}
+          </li>
 
 
 
