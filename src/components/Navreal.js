@@ -44,7 +44,7 @@ export default function Example() {
             </div>
 
             {/* 🧭 NAVIGATION SECTION */}
-            <div className=" sm:ml-6 sm:flex sm:space-x-4 items-center">
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-4 items-center">
               <a href="/" className="rounded-md px-3 py-2 text-sm font-medium bg-gray-950/50 text-white">
                 POS
               </a>
