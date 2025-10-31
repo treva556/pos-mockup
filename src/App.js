@@ -6,13 +6,14 @@ import Navlink from "./components/Navlink";
 import Insights from "./pages/Insights";
 import Products from "./pages/Products";
 import Stock from "./pages/Stock";
-
+import Example from "./components/Navreal";
 function App() {
   return (
     <Router>
       <div className="flex">
         {/* Sidebar */}
-        <Navlink />
+        <Example/>
+        {/* <Navlink /> */}
 
         {/* Main Content */}
         <div className="flex-1 p-6">
