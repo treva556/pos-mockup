@@ -1,12 +1,19 @@
-//////
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  // We’ll make “Projects” have a dropdown
-]
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from '@headlessui/react'
+import {
+  Bars3Icon,
+  BellIcon,
+  XMarkIcon,
+  ChevronDownIcon,
+} from '@heroicons/react/24/outline'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -22,7 +29,7 @@ export default function Example() {
         <div className="relative flex h-16 items-center justify-between">
           {/* MOBILE MENU BUTTON */}
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
               <Bars3Icon aria-hidden="true" className="block size-6 group-data-open:hidden" />
               <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
             </DisclosureButton>
@@ -31,61 +38,58 @@ export default function Example() {
           {/* LOGO + NAV ITEMS */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <p> Tail POS</p>
+              <p className="text-white font-semibold">Tail POS</p>
             </div>
 
-            {/* DESKTOP NAV */}
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-4">
-              <a
-                href="#"
-                className="rounded-md px-3 py-2 text-sm font-medium bg-gray-950/50 text-white"
-              >
-                Dashboard
+            {/* 🧭 NAVIGATION SECTION */}
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-4 items-center">
+              {/* Normal links */}
+              <a href="#" className="rounded-md px-3 py-2 text-sm font-medium bg-gray-950/50 text-white">
+                POS
               </a>
-              <a
-                href="#"
-                className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
-              >
+
+              <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
                 Team
               </a>
 
-              {/* 🔽 DROPDOWN EXAMPLE */}
-              <Menu as="div" className="relative inline-block text-left">
-                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
-                  Projects
-                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-400" />
-                </MenuButton>
+              {/* Dropdowns */}
+              {['Stock', 'Customers', 'Suppliers', 'Insights'].map((label) => (
+                <Menu key={label} as="div" className="relative inline-block text-left">
+                  <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                    {label}
+                    <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                  </MenuButton>
 
-                <MenuItems
-                  transition
-                  className="absolute left-0 z-10 mt-2 w-40 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition data-closed:scale-95 data-closed:opacity-0 data-enter:duration-100 data-leave:duration-75"
-                >
-                  <MenuItem>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-300 data-focus:bg-white/5 data-focus:text-white"
-                    >
-                      New Project
-                    </a>
-                  </MenuItem>
-                  <MenuItem>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-300 data-focus:bg-white/5 data-focus:text-white"
-                    >
-                      View All
-                    </a>
-                  </MenuItem>
-                  <MenuItem>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-300 data-focus:bg-white/5 data-focus:text-white"
-                    >
-                      Archived
-                    </a>
-                  </MenuItem>
-                </MenuItems>
-              </Menu>
+                  <MenuItems
+                    transition
+                    className="absolute left-0 z-10 mt-2 w-40 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition data-closed:scale-95 data-closed:opacity-0 data-enter:duration-100 data-leave:duration-75"
+                  >
+                    <MenuItem>
+                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
+                        New
+                      </a>
+                    </MenuItem>
+                    <MenuItem>
+                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
+                        View All
+                      </a>
+                    </MenuItem>
+                    <MenuItem>
+                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
+                        Archived
+                      </a>
+                    </MenuItem>
+                  </MenuItems>
+                </Menu>
+              ))}
+
+              <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                Account
+              </a>
+
+              <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                Settings
+              </a>
             </div>
           </div>
 
@@ -93,7 +97,7 @@ export default function Example() {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
+              className="relative rounded-full p-1 text-gray-200 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
             >
               <BellIcon aria-hidden="true" className="size-6" />
             </button>
@@ -112,21 +116,13 @@ export default function Example() {
                 transition
                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition data-closed:scale-95 data-closed:opacity-0"
               >
-                <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-300 data-focus:bg-white/5">
-                    Your profile
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-300 data-focus:bg-white/5">
-                    Settings
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-300 data-focus:bg-white/5">
-                    Sign out
-                  </a>
-                </MenuItem>
+                {['Your profile', 'Settings', 'Sign out'].map((item) => (
+                  <MenuItem key={item}>
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
+                      {item}
+                    </a>
+                  </MenuItem>
+                ))}
               </MenuItems>
             </Menu>
           </div>
@@ -136,20 +132,18 @@ export default function Example() {
       {/* MOBILE NAV LINKS */}
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pt-2 pb-3">
-          <DisclosureButton
-            as="a"
-            href="#"
-            className="block rounded-md px-3 py-2 text-base font-medium bg-gray-950/50 text-white"
-          >
-            Dashboard
-          </DisclosureButton>
-          <DisclosureButton
-            as="a"
-            href="#"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
-          >
-            Team
-          </DisclosureButton>
+          {['POS', 'Team', 'Stock', 'Customers', 'Suppliers', 'Insights', 'Account', 'Settings'].map(
+            (item) => (
+              <DisclosureButton
+                key={item}
+                as="a"
+                href="#"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+              >
+                {item}
+              </DisclosureButton>
+            )
+          )}
         </div>
       </DisclosurePanel>
     </Disclosure>
