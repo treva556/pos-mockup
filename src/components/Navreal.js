@@ -1,4 +1,6 @@
 
+//
+
 import {
   Disclosure,
   DisclosureButton,
@@ -43,45 +45,81 @@ export default function Example() {
 
             {/* 🧭 NAVIGATION SECTION */}
             <div className="hidden sm:ml-6 sm:flex sm:space-x-4 items-center">
-              {/* Normal links */}
               <a href="/" className="rounded-md px-3 py-2 text-sm font-medium bg-gray-950/50 text-white">
                 POS
               </a>
 
               <a href="/insights" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                Team
+                Reports
               </a>
 
-              {/* Dropdowns */}
-              {['Stock', 'Customers', 'Suppliers', 'Insights'].map((label) => (
-                <Menu key={label} as="div" className="relative inline-block text-left">
-                  <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                    {label}
-                    <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
-                  </MenuButton>
+              {/* STOCK MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                  Stock
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
+                  {['Add Product', 'Stock Levels', 'Categories', 'Adjustments'].map(item => (
+                    <MenuItem key={item}>
+                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
+                        {item}
+                      </a>
+                    </MenuItem>
+                  ))}
+                </MenuItems>
+              </Menu>
 
-                  <MenuItems
-                    transition
-                    className="absolute left-0 z-10 mt-2 w-40 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition data-closed:scale-95 data-closed:opacity-0 data-enter:duration-100 data-leave:duration-75"
-                  >
-                    <MenuItem>
+              {/* CUSTOMERS MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                  Customers
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
+                  {['Add Customer', 'Customer List', 'Loyalty Points'].map(item => (
+                    <MenuItem key={item}>
                       <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
-                        New
+                        {item}
                       </a>
                     </MenuItem>
-                    <MenuItem>
+                  ))}
+                </MenuItems>
+              </Menu>
+
+              {/* SUPPLIERS MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                  Suppliers
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
+                  {['Enter Bills','Pay Bills','Purchase Orders', 'Supplier List'].map(item => (
+                    <MenuItem key={item}>
                       <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
-                        View All
+                        {item}
                       </a>
                     </MenuItem>
-                    <MenuItem>
+                  ))}
+                </MenuItems>
+              </Menu>
+
+              {/* REPORTS MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                  Reports
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
+                  {['Sales Report', 'Expenses', 'Daily Summary', 'Profit & Loss'].map(item => (
+                    <MenuItem key={item}>
                       <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
-                        Archived
+                        {item}
                       </a>
                     </MenuItem>
-                  </MenuItems>
-                </Menu>
-              ))}
+                  ))}
+                </MenuItems>
+              </Menu>
 
               <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
                 Account
@@ -114,7 +152,7 @@ export default function Example() {
 
               <MenuItems
                 transition
-                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition data-closed:scale-95 data-closed:opacity-0"
+                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10"
               >
                 {['Your profile', 'Settings', 'Sign out'].map((item) => (
                   <MenuItem key={item}>
@@ -128,24 +166,6 @@ export default function Example() {
           </div>
         </div>
       </div>
-
-      {/* MOBILE NAV LINKS */}
-      <DisclosurePanel className="sm:hidden">
-        <div className="space-y-1 px-2 pt-2 pb-3">
-          {['POS', 'Team', 'Stock', 'Customers', 'Suppliers', 'Insights', 'Account', 'Settings'].map(
-            (item) => (
-              <DisclosureButton
-                key={item}
-                as="a"
-                href="#"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-200 hover:bg-white/5 hover:text-white"
-              >
-                {item}
-              </DisclosureButton>
-            )
-          )}
-        </div>
-      </DisclosurePanel>
     </Disclosure>
   )
 }
