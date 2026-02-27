@@ -2,7 +2,7 @@
 
 // app.js
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navlink from "./components/Navlink";
+// import Navlink from "./components/Navlink";
 import Insights from "./pages/Insights";
 import Products from "./pages/Products";
 import Stock from "./pages/Stock";

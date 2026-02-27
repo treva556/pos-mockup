@@ -5,9 +5,9 @@ import '../App.css';
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Insights from '../pages/Insights';
-import Products from '../pages/Products';
-import Stock from '../pages/Stock';
+// import Insights from '../pages/Insights';
+// import Products from '../pages/Products';
+// import Stock from '../pages/Stock';
 // import {
 //   Home,
 //   BarChart,

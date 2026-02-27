@@ -4,7 +4,7 @@
 import {
   Disclosure,
   DisclosureButton,
-  DisclosurePanel,
+  // DisclosurePanel,
   Menu,
   MenuButton,
   MenuItem,
@@ -58,7 +58,7 @@ export default function Example() {
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
                   {['Chart of Accounts', 'Journal Entries', 'vat', 'Item List', 'Reports'].map(item => (
                     <MenuItem key={item}>
-                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
+                      <a href="all" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
                         {item}
                       </a>
                     </MenuItem>
@@ -91,7 +91,7 @@ export default function Example() {
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
                   {['Add Customer', 'Customer List', 'Loyalty Points'].map(item => (
                     <MenuItem key={item}>
-                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
+                      <a href="all" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
                         {item}
                       </a>
                     </MenuItem>
@@ -108,7 +108,7 @@ export default function Example() {
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
                   {['Enter Bills','Pay Bills','Purchase Orders', 'Supplier List'].map(item => (
                     <MenuItem key={item}>
-                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
+                      <a href="all" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
                         {item}
                       </a>
                     </MenuItem>
@@ -133,11 +133,11 @@ export default function Example() {
                 </MenuItems>
               </Menu> */}
 
-              <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+              <a href="all" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
                 Account
               </a>
 
-              <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+              <a href="all" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
                 Settings
               </a>
             </div>
