@@ -1,6 +1,6 @@
 
-//
-
+// navreal.js
+import { Link } from "react-router-dom"
 import {
   Disclosure,
   DisclosureButton,
@@ -25,7 +25,7 @@ export default function Example() {
   return (
     <Disclosure
       as="nav"
-      className="relative bg-blue-500 w-full after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
+      className="relative bg-purple-500 w-full after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
     >
       <div className="mx-auto w-full px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
@@ -56,14 +56,43 @@ export default function Example() {
                   <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
                 </MenuButton>
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
-                  {['Chart of Accounts', 'Journal Entries', 'vat', 'Item List', 'Reports'].map(item => (
-                    <MenuItem key={item}>
-                      <a href="all" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
-                        {item}
-                      </a>
-                    </MenuItem>
-                  ))}
-                </MenuItems>
+
+  <MenuItem as={Link}
+    to="/stock"
+    className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+  >
+    Item List
+  </MenuItem>
+
+  <MenuItem as={Link}
+    to="/coa"
+    className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+  >
+    Chart of Accounts
+  </MenuItem>
+
+  <MenuItem as={Link}
+    to="/journal"
+    className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+  >
+    Journal Entries
+  </MenuItem>
+
+  <MenuItem as={Link}
+    to="/vat"
+    className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+  >
+    VAT
+  </MenuItem>
+
+  <MenuItem as={Link}
+    to="/reports"
+    className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+  >
+    Reports
+  </MenuItem>
+
+</MenuItems>
               </Menu>    
            
 
@@ -118,30 +147,7 @@ export default function Example() {
                 </MenuItems>
               </Menu>
 
-              {/* REPORTS MENU
-              <Menu as="div" className="relative inline-block text-left">
-                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                  Reports
-                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
-                </MenuButton>
-                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
-                  {['Sales Report', 'Expenses', 'Daily Summary', 'Profit & Loss'].map(item => (
-                    <MenuItem key={item}>
-                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
-                        {item}
-                      </a>
-                    </MenuItem>
-                  ))}
-                </MenuItems>
-              </Menu> */}
-
-              {/* <a href="all" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                Accounting
-              </a> */}
-
-              {/* <a href="all" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                Settings
-              </a> */}
+            
             </div>
           </div>
 

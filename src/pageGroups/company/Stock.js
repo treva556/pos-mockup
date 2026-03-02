@@ -2,66 +2,88 @@
 
 // src/pages/Stock.js
 import React from "react";
-import Chart from "react-apexcharts";
-
-const chartConfig = {
-  type: "bar",
-  height: 240,
-  series: [
-    {
-      name: "Sales",
-      data: [50, 40, 300, 320, 500,],
-    },
-  ],
-  options: {
-    chart: {
-      toolbar: { show: false },
-    },
-    dataLabels: { enabled: false },
-    colors: ["#2563eb"], // Tailwind blue-600
-    plotOptions: {
-      bar: {
-        columnWidth: "40%",
-        borderRadius: 4,
-      },
-    },
-    xaxis: {
-      categories: ["Apples", "Bananas", "Juniper", "Dec"],
-      labels: {
-        style: { colors: "#6b7280", fontSize: "12px" }, // gray-500
-      },
-    },
-    yaxis: {
-      labels: {
-        style: { colors: "#6b7280", fontSize: "12px" },
-      },
-    },
-    grid: {
-      borderColor: "#e5e7eb", // gray-200
-      strokeDashArray: 4,
-    },
-    tooltip: { theme: "dark" },
-  },
-};
 
 export default function Stock() {
+  const stockItems = [
+    {
+      id: 1,
+      name: "Apples",
+      quantity: 120,
+      buyingPrice: 20,
+      sellingPrice: 35,
+    },
+    {
+      id: 2,
+      name: "Bananas",
+      quantity: 200,
+      buyingPrice: 10,
+      sellingPrice: 18,
+    },
+    {
+      id: 3,
+      name: "Pineapples",
+      quantity: 75,
+      buyingPrice: 50,
+      sellingPrice: 80,
+    },
+  ];
+
+  const calculateStockValue = (item) =>
+    item.quantity * item.buyingPrice;
+
   return (
     <div className="bg-white shadow rounded-lg p-6">
       {/* Header */}
-      <div className="flex items-center gap-4 mb-4">
-        <div className="bg-blue-600 text-white p-3 rounded-lg">
-          📊
-        </div>
-        <div>
-          <h2 className="text-lg font-semibold text-gray-800">Bar Chart</h2>
-          <p className="text-sm text-gray-500">
-            Visualize your data in a simple way with ApexCharts.
-          </p>
-        </div>
+      <div className="mb-6">
+        <h2 className="text-xl font-semibold text-gray-800">
+          Item List (Stock)
+        </h2>
+        <p className="text-sm text-gray-500">
+          Overview of current inventory levels
+        </p>
       </div>
 
-      {/* Chart */}
-      <Chart {...chartConfig} />
+      {/* Table */}
+      <div className="overflow-x-auto">
+        <table className="min-w-full border border-gray-200 rounded-lg">
+          <thead className="bg-gray-100 text-left text-sm text-gray-600">
+            <tr>
+              <th className="px-4 py-3">Item</th>
+              <th className="px-4 py-3">Quantity</th>
+              <th className="px-4 py-3">Buying Price (KSh)</th>
+              <th className="px-4 py-3">Selling Price (KSh)</th>
+              <th className="px-4 py-3">Stock Value (KSh)</th>
+            </tr>
+          </thead>
+          <tbody className="text-sm text-gray-700">
+            {stockItems.map((item) => (
+              <tr key={item.id} className="border-t">
+                <td className="px-4 py-3">{item.name}</td>
+                <td className="px-4 py-3">{item.quantity}</td>
+                <td className="px-4 py-3">{item.buyingPrice}</td>
+                <td className="px-4 py-3">{item.sellingPrice}</td>
+                <td className="px-4 py-3 font-medium text-gray-900">
+                  {calculateStockValue(item)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Total Inventory Value */}
+      <div className="mt-6 text-right">
+        <span className="text-sm text-gray-500 mr-2">
+          Total Inventory Value:
+        </span>
+        <span className="text-lg font-semibold text-gray-800">
+          KSh{" "}
+          {stockItems.reduce(
+            (total, item) => total + calculateStockValue(item),
+            0
+          )}
+        </span>
+      </div>
     </div>
   );
 }
