@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Insights from "./pages/Insights";
 import Stock from "./pageGroups/company/Stock";
 import Example from "./components/Navreal";
+import Chartaccounts from "./pageGroups/company/coa";
 // import Pos from "./pages/pospage";
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
              {/* <Route path="/insights" element={<Insights />} />
             <Route path="/products" element={<Products />} /> */}
             <Route path="/stock" element={<Stock />} /> 
+             <Route path="/coa" element={<Chartaccounts />} /> 
 
           </Routes>
         </div>
