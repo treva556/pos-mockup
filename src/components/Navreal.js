@@ -139,9 +139,9 @@ export default function Example() {
                 Accounting
               </a> */}
 
-              <a href="all" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+              {/* <a href="all" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
                 Settings
-              </a>
+              </a> */}
             </div>
           </div>
 
