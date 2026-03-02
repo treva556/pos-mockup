@@ -120,7 +120,7 @@ export default function Example() {
                   <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
                 </MenuButton>
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
-                  {['Supplier centre','Enter Bills','Pay Bills','Purchase Orders'].map(item => (
+                  {['Supplier centre','Bills','Purchase Orders'].map(item => (
                     <MenuItem key={item}>
                       <a href="all" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
                         {item}
