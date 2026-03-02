@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Stock from "./pageGroups/company/Stock";
 import Example from "./components/Navreal";
 import Chartaccounts from "./pageGroups/company/coa";
+import Reports from "./pageGroups/company/reports/reports";
 // import Pos from "./pages/pospage";
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             <Route path="/products" element={<Products />} /> */}
             <Route path="/stock" element={<Stock />} /> 
              <Route path="/coa" element={<Chartaccounts />} /> 
-
+            <Route path="/reports" element={<Reports/>} /> 
           </Routes>
         </div>
       </div>
