@@ -45,9 +45,9 @@ export default function Example() {
 
             {/* 🧭 NAVIGATION SECTION */}
             <div className="hidden sm:ml-6 sm:flex sm:space-x-4 items-center">
-              <a href="/" className="rounded-md px-3 py-2 text-sm font-medium bg-gray-950/50 text-white">
+              {/* <a href="/" className="rounded-md px-3 py-2 text-sm font-medium bg-gray-950/50 text-white">
                 POS
-              </a>
+              </a> */}
 
                    {/* STOCK MENU */}
               <Menu as="div" className="relative inline-block text-left">
@@ -65,22 +65,7 @@ export default function Example() {
                   ))}
                 </MenuItems>
               </Menu>    
-              {/* STOCK MENU */}
-              {/* <Menu as="div" className="relative inline-block text-left">
-                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                  Stock
-                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
-                </MenuButton>
-                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
-                  {['Add Product', 'Stock Levels', 'Categories', 'Adjustments'].map(item => (
-                    <MenuItem key={item}>
-                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
-                        {item}
-                      </a>
-                    </MenuItem>
-                  ))}
-                </MenuItems>
-              </Menu> */}
+           
 
               {/* CUSTOMERS MENU */}
               <Menu as="div" className="relative inline-block text-left">
@@ -89,7 +74,7 @@ export default function Example() {
                   <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
                 </MenuButton>
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
-                  {['Add Customer', 'Customer List', 'Loyalty Points'].map(item => (
+                  {['Customer Centre', 'Create Sales Order','Create estimate','Create Invoices', 'Create sales Receipt', 'Create Statements', 'Receive Payments'].map(item => (
                     <MenuItem key={item}>
                       <a href="all" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
                         {item}
@@ -106,7 +91,24 @@ export default function Example() {
                   <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
                 </MenuButton>
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
-                  {['Enter Bills','Pay Bills','Purchase Orders', 'Supplier List'].map(item => (
+                  {['Supplier centre','Enter Bills','Pay Bills','Purchase Orders'].map(item => (
+                    <MenuItem key={item}>
+                      <a href="all" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
+                        {item}
+                      </a>
+                    </MenuItem>
+                  ))}
+                </MenuItems>
+              </Menu>
+
+                {/* BANKING MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                  Banking
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
+                  {['Bank Register','Write Checks','Bank Reconciliation'].map(item => (
                     <MenuItem key={item}>
                       <a href="all" className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white">
                         {item}
@@ -133,9 +135,9 @@ export default function Example() {
                 </MenuItems>
               </Menu> */}
 
-              <a href="all" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                Account
-              </a>
+              {/* <a href="all" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                Accounting
+              </a> */}
 
               <a href="all" className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
                 Settings
