@@ -72,7 +72,7 @@ export default function Example() {
                 </MenuItem>
 
                 <MenuItem as={Link}
-                  to="/journal"
+                  to="/entries"
                   className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
                 >
                   Journal Entries

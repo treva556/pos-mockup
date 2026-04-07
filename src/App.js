@@ -14,6 +14,8 @@ import Invoices from "./pageGroups/customerss/Invoices";
 import Purchase_orders from "./pageGroups/suppliers/Purchase Orders";
 import Bills from "./pageGroups/suppliers/Bills";
 import Suppliers from "./pageGroups/suppliers/Suppliers";
+import JournalEntries from "./pageGroups/company/jentries";
+import Vat from "./pageGroups/company/vat";
 // import Pos from "./pages/pospage";
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
             <Route path="/stock" element={<Stock />} /> 
              <Route path="/coa" element={<Chartaccounts />} /> 
             <Route path="/reports" element={<Reports/>} /> 
+             <Route path="/entries" element={<JournalEntries />} /> 
+            <Route path="/vat" element={<Vat/>} /> 
             <Route path='/customers' element={<Customers/>} />
              <Route path='/sales_receipt' element={<Sales_Receipts/>} />
              <Route path='/invoices' element={<Invoices/>} />
