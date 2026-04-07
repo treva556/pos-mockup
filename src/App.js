@@ -8,6 +8,12 @@ import Stock from "./pageGroups/company/Stock";
 import Example from "./components/Navreal";
 import Chartaccounts from "./pageGroups/company/coa";
 import Reports from "./pageGroups/company/reports/reports";
+import Customers from "./pageGroups/customerss/Customers";
+import Sales_Receipts from "./pageGroups/customerss/Salesreceipt";
+import Invoices from "./pageGroups/customerss/Invoices";
+import Purchase_orders from "./pageGroups/suppliers/Purchase Orders";
+import Bills from "./pageGroups/suppliers/Bills";
+import Suppliers from "./pageGroups/suppliers/Suppliers";
 // import Pos from "./pages/pospage";
 function App() {
   return (
@@ -28,6 +34,14 @@ function App() {
             <Route path="/stock" element={<Stock />} /> 
              <Route path="/coa" element={<Chartaccounts />} /> 
             <Route path="/reports" element={<Reports/>} /> 
+            <Route path='/customers' element={<Customers/>} />
+             <Route path='/sales_receipt' element={<Sales_Receipts/>} />
+             <Route path='/invoices' element={<Invoices/>} />
+             <Route path='/suppliers' element={<Suppliers/>} />
+             <Route path='/bills' element={<Bills/>} />
+             <Route path='/purchase_orders' element={<Purchase_orders/>} />
+
+
           </Routes>
         </div>
       </div>
