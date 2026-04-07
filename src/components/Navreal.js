@@ -104,38 +104,38 @@ export default function Example() {
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
 
                 <MenuItem as={Link}
-                  to="/stock"
+                  to="/customers"
                   className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
                 >
-                  Item List
+                  Customer Center
                 </MenuItem>
 
                 <MenuItem as={Link}
-                  to="/coa"
+                  to="/sales_receipt"
                   className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
                 >
-                  Chart of Accounts
+                 Sales Receipt
                 </MenuItem>
 
                 <MenuItem as={Link}
-                  to="/journal"
+                  to="/invoices"
                   className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
                 >
-                  Journal Entries
+                  Invoices
                 </MenuItem>
 
                 <MenuItem as={Link}
                   to="/vat"
                   className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
                 >
-                  VAT
+                  ...
                 </MenuItem>
 
                 <MenuItem as={Link}
                   to="/reports"
                   className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
                 >
-                  Reports
+                  ...
                 </MenuItem>
 
               </MenuItems>
