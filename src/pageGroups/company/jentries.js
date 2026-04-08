@@ -6,6 +6,9 @@ function JournalEntries() {
    
       <div className="flex-row">
          J. Entries Page
+         <div> J.Entry no.
+               account
+         </div>
       </div>
    
   );

@@ -39,9 +39,10 @@ function Chartaccounts() {
               <h2 className="text-xl font-semibold text-gray-800">
                 Chart of Accounts
               </h2>
-              <p className="text-sm text-gray-500">
-                {/* Overview of current inventory levels */}
-              </p>
+              <button className="absolute bg-purple-400 mr-10  rounded-md right-0 flex items-center"> 
+                <h3 className=" m-2"> add supplier</h3>
+              </button>
+             
             </div>
       
             {/* Table */}
