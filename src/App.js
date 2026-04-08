@@ -36,6 +36,11 @@ function App() {
           <Routes>
              {/* <Route path="/insights" element={<Insights />} />
             <Route path="/products" element={<Products />} /> */}
+            <Route path='/bills' element={<Bills/>} />
+            
+            {/* remove later */}
+            <Route path='/' element={<Bills/>} />
+
             <Route path="/stock" element={<Stock />} /> 
              <Route path="/coa" element={<Chartaccounts />} /> 
             <Route path="/reports" element={<Reports/>} /> 
