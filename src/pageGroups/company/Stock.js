@@ -2,6 +2,7 @@
 
 // src/pages/Stock.js
 import React from "react";
+import { Link } from "react-router";
 
 export default function Stock() {
   const stockItems = [
@@ -41,14 +42,19 @@ export default function Stock() {
         <p className="text-sm text-gray-500">
           Overview of current inventory levels
         </p>
-        <button className="absolute bg-purple-400 mr-10  rounded-md right-0 flex items-center"> 
-               <h3 className=" m-2"> add supplier</h3>
-         </button>
+       <button className="absolute bg-purple-400 mr-10  rounded-md right-0 flex items-center"> 
+                       <Link
+                       to="/add-item"
+                       className="absolute bg-purple-400 mr-10 rounded-md right-0 flex items-center"
+                       >
+                       <span className=" m-2 text-white">add Item</span>
+                       </Link>
+                     </button>
       </div>
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="min-w-full border border-gray-200 rounded-lg">
+        <table className="min-w-full border mt-5 border-gray-200 rounded-lg">
           <thead className="bg-gray-100 text-left text-sm text-gray-600">
             <tr>
               <th className="px-4 py-3">Item</th>

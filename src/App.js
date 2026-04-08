@@ -18,6 +18,7 @@ import JournalEntries from "./pageGroups/company/jentries";
 import Vat from "./pageGroups/company/vat";
 import AddBill from "./pageGroups/suppliers/Addbill";
 import AddAccount from "./pageGroups/company/coa_add";
+import AddItem from "./pageGroups/company/Stock_add";
 // import Pos from "./pages/pospage";
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
              <Route path='/purchase_orders' element={<Purchase_orders/>} />
              <Route path="/add-bill" element={<AddBill />} />
              <Route path="/add-account" element={<AddAccount />} />
+             <Route path="/add-item" element={<AddItem />} />
+
 
           </Routes>
         </div>
