@@ -37,7 +37,7 @@ function App() {
              {/* <Route path="/insights" element={<Insights />} />
             <Route path="/products" element={<Products />} /> */}
             <Route path='/bills' element={<Bills/>} />
-            
+
             {/* remove later */}
             <Route path='/' element={<Bills/>} />
 
@@ -56,6 +56,15 @@ function App() {
              <Route path="/add-account" element={<AddAccount />} />
              <Route path="/add-item" element={<AddItem />} />
 
+
+
+
+
+             
+         {/* Accounts (COA) = categories
+        Journal Entries = events
+        Journal Lines = money movement
+        Reports = results */}
 
           </Routes>
         </div>
