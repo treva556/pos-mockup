@@ -124,6 +124,9 @@ function Chartaccounts() {
           </div>
         );
       } */}
+     <p className=" text-red-600 font-semibold italic mt-11">  dea ler (dividends), (expenses), (assets), = (liabilities), (equity), (revenue) </p>
+     <p className=" text-blue-600 font-semibold italic mt-11">  inc with debit, dec with credit = inc with credit, dec with debit </p>
+
 
       </div>
    

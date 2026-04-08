@@ -90,7 +90,7 @@ export default function Stock() {
         </span>
       </div>
 
-          <p className=" text-red-600 font-semibold italic mt-11"> Stock add updates Invoices table & increases stock (assets) & decreases cash (assets)   (revenue) </p>
+          <p className=" text-red-600 font-semibold italic mt-11"> Stock add updates Invoices table & increases stock (assets) & decreases cash (assets)   (revenue) <p className=" text-blue-700"> dea ler</p> </p>
 
     </div>
   );
