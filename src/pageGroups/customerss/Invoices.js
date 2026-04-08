@@ -73,7 +73,7 @@ function Invoices() {
               </table>
             </div>
     
-
+    <p className=" text-red-600 font-semibold italic mt-11"> Invoices updates Invoices table & decreases stock (assets) & increases A/R  (revenue) </p>
       </div>
    
   );

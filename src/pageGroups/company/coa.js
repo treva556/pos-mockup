@@ -6,23 +6,58 @@ function Chartaccounts() {
         const stockItems = [
           {
             id: 1,
-            name: "Apples",
+            name: "",
+            type:"",
             quantity: 120,
             buyingPrice: 20,
           
           },
           {
             id: 2,
-            name: "Bananas",
+            name: "Rents",
+             type:"Expenses",
             quantity: 200,
             buyingPrice: 10,
            
           },
           {
             id: 3,
-            name: "Pineapples",
+            name: "cash account",
+             type:"Assets",
             quantity: 75,
             buyingPrice: 50,
+           
+          },
+           {
+            id: 4,
+            name: "shop bills",
+            type:"Liabilities",
+            quantity: 120,
+            buyingPrice: 20,
+          
+          },
+          {
+            id: 5,
+            name: "Bananas",
+             type:"Equity",
+            quantity: 200,
+            buyingPrice: 10,
+           
+          },
+           {
+            id: 6,
+            name: "shop sale",
+            type:"Revenue",
+            quantity: 120,
+            buyingPrice: 20,
+          
+          },
+          {
+            id: 7,
+            name: "Bananas",
+             type:"Revenue",
+            quantity: 200,
+            buyingPrice: 10,
            
           },
         ];
@@ -39,7 +74,7 @@ function Chartaccounts() {
               <h2 className="text-xl font-semibold text-gray-800">
                 Chart of Accounts
               </h2>
-              <button className="absolute bg-purple-400 mr-10  rounded-md right-0 flex items-center"> 
+              <button className="absolute bg-purple-400 mr-10   rounded-md right-0 flex items-center"> 
                 <h3 className=" m-2"> add supplier</h3>
               </button>
              
@@ -47,19 +82,22 @@ function Chartaccounts() {
       
             {/* Table */}
             <div className="overflow-x-auto">
-              <table className="min-w-full border border-gray-200 rounded-lg">
+              <table className="min-w-full border border-gray-200 rounded-lg mt-8">
                 <thead className="bg-purple-300 text-left text-sm text-gray-600">
                   <tr>
                     <th className="px-4 py-3">NAME</th>
                     <th className="px-4 py-3">TYPE</th>
                     <th className="px-4 py-3">DETAIL TYPE</th>
                     <th className="px-4 py-3">BALANCE</th>
+                     <th className="px-4 py-3">BALANCE</th>
                   </tr>
                 </thead>
                 <tbody className="text-sm text-gray-700">
                   {stockItems.map((item) => (
                     <tr key={item.id} className="border-t">
                       <td className="px-4 py-3">{item.name}</td>
+                      <td className="px-4 py-3">{item.type}</td>
+
                       <td className="px-4 py-3">{item.quantity}</td>
                       <td className="px-4 py-3">{item.buyingPrice}</td>
                       <td className="px-4 py-3 font-medium text-gray-900">
