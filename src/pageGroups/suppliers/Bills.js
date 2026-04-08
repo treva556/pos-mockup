@@ -1,5 +1,6 @@
 //bills
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AddBill from "./Addbill";
 
 function Bills() {
   return (
@@ -7,7 +8,7 @@ function Bills() {
       <div className="flex-row">
          Bills Page
          <div>add bills button</div>
-         <div>pay bills</div>
+         <div><AddBill/> </div>
 
       </div>
 
