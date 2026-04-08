@@ -6,8 +6,8 @@ function Chartaccounts() {
         const stockItems = [
           {
             id: 1,
-            name: "Stock Sales",
-            type:"COGS",
+            name: "COGS",
+            type:"Expenses",
             quantity: 120,
             buyingPrice: 20,
           
@@ -124,7 +124,7 @@ function Chartaccounts() {
           </div>
         );
       } */}
-     <p className=" text-red-600 font-semibold italic mt-11">  dea ler (cogs), (expenses), (assets), = (liabilities), (equity), (revenue) </p>
+     <p className=" text-red-600 font-semibold italic mt-11">  dea ler (cogs is expenses), (assets), = (liabilities), (equity), (revenue) </p>
      <p className=" text-blue-600 font-semibold italic mt-2">  inc with debit, dec with credit = inc with credit, dec with debit </p>
 
 
