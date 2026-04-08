@@ -15,7 +15,7 @@ function Chartaccounts() {
           {
             id: 2,
             name: "Rents",
-             type:"Expenses",
+            type:"Expenses",
             quantity: 200,
             buyingPrice: 10,
            
@@ -23,7 +23,7 @@ function Chartaccounts() {
           {
             id: 3,
             name: "cash account",
-             type:"Assets",
+            type:"Assets",
             quantity: 75,
             buyingPrice: 50,
            
@@ -39,7 +39,7 @@ function Chartaccounts() {
           {
             id: 5,
             name: "Bananas",
-             type:"Equity",
+            type:"Equity",
             quantity: 200,
             buyingPrice: 10,
            
@@ -55,7 +55,7 @@ function Chartaccounts() {
           {
             id: 7,
             name: "Bananas",
-             type:"Revenue",
+            type:"Revenue",
             quantity: 200,
             buyingPrice: 10,
            
@@ -89,7 +89,6 @@ function Chartaccounts() {
                     <th className="px-4 py-3">TYPE</th>
                     <th className="px-4 py-3">DETAIL TYPE</th>
                     <th className="px-4 py-3">BALANCE</th>
-                     <th className="px-4 py-3">BALANCE</th>
                   </tr>
                 </thead>
                 <tbody className="text-sm text-gray-700">
@@ -100,9 +99,9 @@ function Chartaccounts() {
 
                       <td className="px-4 py-3">{item.quantity}</td>
                       <td className="px-4 py-3">{item.buyingPrice}</td>
-                      <td className="px-4 py-3 font-medium text-gray-900">
+                      {/* <td className="px-4 py-3 font-medium text-gray-900">
                         {calculateStockValue(item)}
-                      </td>
+                      </td> */}
                     </tr>
                   ))}
                 </tbody>
