@@ -1,11 +1,7 @@
 //bills
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddBill from "./Addbill";
-
-//vendors / suppliers
-// import { BrowserRouter as Router, Routes, Rout 
-
-import { Button } from "@headlessui/react";
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 
 function Bills() {
  
@@ -43,12 +39,15 @@ function Bills() {
             {/* Header */}
             <div className="mb-6 flex">
               <h2 className="text-xl font-semibold text-gray-800">
-               Supplier Centre
+               Bills
               </h2>
               <button className="absolute bg-purple-400 mr-10  rounded-md right-0 flex items-center"> 
-                <h3 className=" m-2"> add supplier</h3>
-                         <div><AddBill/> </div>
-
+                <Link
+                to="/add-bill"
+                className="absolute bg-purple-400 mr-10 rounded-md right-0 flex items-center"
+                >
+                <span className=" m-2 text-white">add Bill</span>
+                </Link>
               </button>
             </div>
       

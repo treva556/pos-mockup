@@ -1,5 +1,5 @@
-//bills
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// add customer
+// import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 export default function AddBill() {
@@ -23,7 +23,7 @@ export default function AddBill() {
 
   return (
     <div>
-      <h2 className=" border-b-lime-900 font-bold text-xl">Add Bill</h2>
+      <h2>Add Bill</h2>
 
       {/* <input
         placeholder="Supplier ID"
@@ -60,28 +60,25 @@ export default function AddBill() {
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-       Supplier Name
+        Name  / Company
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Select ↓"></input>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane"></input>
       <p class="text-red-500 text-xs italic">Please fill out this field.</p>
     </div>
-   
+    <div class="w-full md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+        Last Name
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"></input>
+    </div>
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-        Password
+        Name  / Company
       </label>
       <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************"></input>
       <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
-    </div>
-  </div>
-   <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-number">
-        Ammount
-      </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="number" placeholder="00.00"></input>
     </div>
   </div>
   <div class="flex flex-wrap -mx-3 mb-2">
@@ -120,89 +117,3 @@ export default function AddBill() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function AddBill() {
-//   return (
-   
-//       <div className="flex-row">
-//         Add  Bill Page
-        
-
-//       </div>
-
-   
-//   );
-// }
-
-// export default AddBill;
-
-// function saveBill(amount, vendor, category)  {
-// //1. increase expense or asset (the debit)
-//     COA.updateBalance(category, "debit", amount);
-
-// //2. increase the liability (the credit)
-//     COA.updateBalance("Accounts Payable", "credit", amount);
-
-// //3. Update the A/P Aging Report
-//     AP_Aging.addRecord(vendor, amount, dueDate);
-// }
-
-
-// //                              createJournalEntry([
-// //                               { account: "Inventory", debit: 1000 },
-// //   Instead of                  { account: "Accounts Payable", credit: 1000 }
-// //   updateBalance()            ]);
-
-// createJournalEntry({
-//   description: "Supplier Bill",
-//   lines: [
-//     { account: "Inventory", debit: 1000 },
-//     { account: "Accounts Payable", credit: 1000 }
-//   ]
-// })
-
-
-            // What is updateBalance?
-
-            // It’s a function that likely does:
-
-            // if (type === "debit") {
-            //   account.balance += amount;
-            // } else {
-            //   account.balance -= amount;
-            // }
-
-            ////    when bill saved, crud on bills table & maths & crud on COA & reports

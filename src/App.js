@@ -16,6 +16,8 @@ import Bills from "./pageGroups/suppliers/Bills";
 import Suppliers from "./pageGroups/suppliers/Suppliers";
 import JournalEntries from "./pageGroups/company/jentries";
 import Vat from "./pageGroups/company/vat";
+import AddBill from "./pageGroups/suppliers/Addbill";
+import AddAccount from "./pageGroups/company/coa_add";
 // import Pos from "./pages/pospage";
 function App() {
   return (
@@ -44,7 +46,8 @@ function App() {
              <Route path='/suppliers' element={<Suppliers/>} />
              <Route path='/bills' element={<Bills/>} />
              <Route path='/purchase_orders' element={<Purchase_orders/>} />
-
+             <Route path="/add-bill" element={<AddBill />} />
+             <Route path="/add-account" element={<AddAccount />} />
 
           </Routes>
         </div>

@@ -1,5 +1,5 @@
 //coa
-// import { BrowserRouter as Router, Routes, Rout 
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 
 function Chartaccounts() {
  
@@ -75,7 +75,12 @@ function Chartaccounts() {
                 Chart of Accounts
               </h2>
               <button className="absolute bg-purple-400 mr-10   rounded-md right-0 flex items-center"> 
-                <h3 className=" m-2"> add supplier</h3>
+                           <Link
+                        to="/add-account"
+                        className="absolute bg-purple-400 mr-10 rounded-md right-0 flex items-center"
+                      >
+                        <span className="m-2 text-white">add Account</span>
+                      </Link>
               </button>
              
             </div>
