@@ -117,6 +117,8 @@ export default function AddBill() {
 
 
          <button className="bg-purple-500 m-2 p-2 text-white" onClick={handleSubmit}>Save Bill</button>
+  <p className=" text-red-600 font-semibold italic mt-11"> Bills add updates Bills table also increases stock (assets)    &     increases bills debt (liabilities) </p>
+
     </div>
   );
 }

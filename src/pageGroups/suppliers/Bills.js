@@ -77,6 +77,7 @@ function Bills() {
               </table>
             </div>
     
+            <p className=" text-red-600 font-semibold italic mt-11"> Bills add updates Bills table also increases stock (assets)    &     increases bills debt (liabilities) </p>
 
       </div>
    
