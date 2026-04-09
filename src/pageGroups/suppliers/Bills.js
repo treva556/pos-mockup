@@ -49,6 +49,14 @@ function Bills() {
                 <span className=" m-2 text-white">add Bill</span>
                 </Link>
               </button>
+               <button className="absolute bg-purple-400 mr-10  rounded-md right-0 flex items-center"> 
+                <Link
+                to="/add-bill"
+                className="absolute border-purple-700 border-2 mr-10 rounded-md right-12 flex items-center"
+                >
+                <span className=" m-2 text-purple-600">add Bill</span>
+                </Link>
+              </button>
             </div>
       
             {/* Table */}
