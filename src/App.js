@@ -20,6 +20,7 @@ import AddBill from "./pageGroups/suppliers/Addbill";
 import AddAccount from "./pageGroups/company/coa_add";
 import AddItem from "./pageGroups/company/Stock_add";
 import AddEntry from "./pageGroups/company/add_jentries";
+import Users from "./pageGroups/users/Users";
 // import Pos from "./pages/pospage";
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
              <Route path="/add-account" element={<AddAccount />} />
              <Route path="/add-item" element={<AddItem />} />
              <Route path="/add-entry" element={<AddEntry />} />
+             <Route path="/user-center" element={<Users />} />
 
 
 

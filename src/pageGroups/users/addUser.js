@@ -23,7 +23,7 @@ export default function AddBill() {
 
   return (
     <div>
-      <h2>Add Bill</h2>
+      <h2>Add User</h2>
 
       {/* <input
         placeholder="Supplier ID"
