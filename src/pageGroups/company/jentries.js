@@ -1,5 +1,5 @@
-//journal entries
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// journal entries
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 
 // function JournalEntries() {
 //   return (
