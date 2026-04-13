@@ -1,28 +1,29 @@
 //users
 
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 
 function Users() {
  
         const stockItems = [
           {
             id: 1,
-            name: "Trevor International",
-            quantity: 120,
-            buyingPrice: 20,
+            name: "John Doe",
+            email: "something@gmail.com",
+            role: "ADMIN",
           
           },
           {
             id: 2,
-            name: "jaws company",
-            quantity: 200,
-            buyingPrice: 10,
+            name: "Mark Trevor",
+            email: "something@gmail.com",
+            role: "ADMIN",
            
           },
           {
             id: 3,
-            name: "Pineapple company",
-            quantity: 75,
-            buyingPrice: 50,
+            name: "Bruce Wayne",
+            email: "something@gmail.com",
+            role: "ADMIN",
            
           },
         ];
@@ -50,17 +51,17 @@ function Users() {
                 <thead className="bg-purple-300 text-left text-sm text-gray-600">
                   <tr>
                     <th className="px-4 py-3">NAME</th>
-                    <th className="px-4 py-3">TYPE</th>
-                    <th className="px-4 py-3">DETAIL TYPE</th>
-                    <th className="px-4 py-3">BALANCE</th>
+                    <th className="px-4 py-3">EMAIL</th>
+                    <th className="px-4 py-3">ROLE</th>
+                    <th className="px-4 py-3">PHONE</th>
                   </tr>
                 </thead>
                 <tbody className="text-sm text-gray-700">
                   {stockItems.map((item) => (
                     <tr key={item.id} className="border-t">
                       <td className="px-4 py-3">{item.name}</td>
-                      <td className="px-4 py-3">{item.quantity}</td>
-                      <td className="px-4 py-3">{item.buyingPrice}</td>
+                      <td className="px-4 py-3">{item.email}</td>
+                      <td className="px-4 py-3">{item.role}</td>
                       <td className="px-4 py-3 font-medium text-gray-900">
                         {calculateStockValue(item)}
                       </td>
