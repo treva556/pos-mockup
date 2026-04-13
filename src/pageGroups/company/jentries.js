@@ -35,7 +35,7 @@ function JournalEntries() {
             id: 2,
             account: "Office Rents",
             number: "MT-CK",
-            description:"Expenses",
+            description:"Rent Expenses",
             debit: 200,
             credit: 150,
            
@@ -52,10 +52,15 @@ function JournalEntries() {
             {/* Header */}
             <div className="mb-6">
               <h2 className="text-xl font-semibold text-gray-800">
-                Chart of Accounts
+                Journal Entries : Root Users Only
               </h2>
-              <button className="absolute bg-purple-400 mr-10   rounded-md right-0 flex items-center"> 
-                <h3 className=" m-2"> add supplier</h3>
+               <button className="absolute bg-purple-400 mr-10  rounded-md right-0 flex items-center"> 
+                <Link
+                to="/add-entry"
+                className="absolute border-purple-700 border-2 mr-10 rounded-md right-12 flex items-center"
+                >
+                <span className=" m-2 text-purple-600">add Entry</span>
+                </Link>
               </button>
              
             </div>
