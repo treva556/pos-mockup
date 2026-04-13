@@ -16,14 +16,14 @@ function Users() {
             id: 2,
             name: "Mark Trevor",
             email: "something@gmail.com",
-            role: "ADMIN",
+            role: "CASHIER",
            
           },
           {
             id: 3,
             name: "Bruce Wayne",
-            email: "something@gmail.com",
-            role: "ADMIN",
+            email: "nothing@gmail.com",
+            role: "CASHIER",
            
           },
         ];
