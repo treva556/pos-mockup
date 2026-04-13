@@ -38,10 +38,10 @@ function Users() {
             {/* Header */}
             <div className="mb-6">
               <h2 className="text-xl font-semibold text-gray-800">
-                Customer Center
+                User Center : Only ADMINS can create & see users
               </h2>
-             <button className="absolute bg-purple-400 mr-10 rounded-md right-0 flex items-center"> 
-                <h3 className=" m-2"> add customer</h3>
+             <button className="absolute border-purple-400 border-2 mr-10 rounded-md right-0 flex items-center"> 
+                <h3 className=" m-2"> add user</h3>
               </button>
             </div>
       
