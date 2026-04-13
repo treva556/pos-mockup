@@ -214,7 +214,23 @@ export default function Example() {
                 </MenuItems>
               </Menu> */}
 
+             
+             {/* USERS MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                  Users
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
 
+                <MenuItem as={Link}
+                  to="/user-center"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                  User Center
+                </MenuItem>
+              </MenuItems>
+              </Menu> 
 
 
 
@@ -293,9 +309,6 @@ export default function Example() {
                 >
                   User Center
                 </MenuItem>
-
-
-               
               </MenuItems>
               </Menu>   
           </div>
