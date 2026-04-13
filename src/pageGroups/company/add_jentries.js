@@ -23,7 +23,9 @@ export default function AddEntry() {
 
   return (
     <div>
-      <h2>Add Entry</h2>
+      <h2 className=" text-lg font-bold">Add Entry</h2>
+       <p className=" text-red-700 font-bold italic"> "Use Tables from J.entries & bills"</p>
+
 
       {/* <input
         placeholder="Supplier ID"
