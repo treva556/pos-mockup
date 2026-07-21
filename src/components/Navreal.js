@@ -376,7 +376,7 @@ export default function Example() {
               </Menu>  
 
 
-                {/* BANKING MENU */}
+                {/* BANKING MENU
               <Menu as="div" className="relative inline-block text-left">
                 <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
                   Banking
@@ -391,7 +391,7 @@ export default function Example() {
                     </MenuItem>
                   ))}
                 </MenuItems>
-              </Menu>
+              </Menu> */}
 
             
             </div>
