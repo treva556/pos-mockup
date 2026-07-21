@@ -52,7 +52,7 @@ export default function Example() {
                    {/* STOCK MENU */}
               <Menu as="div" className="relative inline-block text-left">
                 <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                  Company
+                  Sell
                   <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
                 </MenuButton>
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
@@ -98,7 +98,7 @@ export default function Example() {
                 {/* CUSTOMERS MENU */}
               <Menu as="div" className="relative inline-block text-left">
                 <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                  Customers
+                  Sales
                   <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
                 </MenuButton>
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
@@ -161,7 +161,7 @@ export default function Example() {
              {/* SUPPLIER MENU */}
               <Menu as="div" className="relative inline-block text-left">
                 <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                  Suppliers
+                  Purchases
                   <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
                 </MenuButton>
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
@@ -191,11 +191,105 @@ export default function Example() {
               </MenuItems>
               </Menu>     
 
+           {/* SUPPLIER MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                Inventory
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
+
+                <MenuItem as={Link}
+                  to="/suppliers"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                  Supplier Center
+                </MenuItem>
+
+                <MenuItem as={Link}
+                  to="/bills"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Bills
+                </MenuItem>
+
+                <MenuItem as={Link}
+                  to="/purchase_orders"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Purchase Orders
+                </MenuItem>
+
+               
+              </MenuItems>
+              </Menu>  
 
 
+              {/* SUPPLIER MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                  Contacts
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
 
+                <MenuItem as={Link}
+                  to="/suppliers"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                  Supplier Center
+                </MenuItem>
 
+                <MenuItem as={Link}
+                  to="/bills"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Bills
+                </MenuItem>
 
+                <MenuItem as={Link}
+                  to="/purchase_orders"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Purchase Orders
+                </MenuItem>
+
+               
+              </MenuItems>
+              </Menu>  
+
+ {/* SUPPLIER MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                  Accounting
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
+
+                <MenuItem as={Link}
+                  to="/suppliers"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                  Supplier Center
+                </MenuItem>
+
+                <MenuItem as={Link}
+                  to="/bills"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Bills
+                </MenuItem>
+
+                <MenuItem as={Link}
+                  to="/purchase_orders"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Purchase Orders
+                </MenuItem>
+
+               
+              </MenuItems>
+              </Menu>  
 
               {/* SUPPLIERS MENU */}
               {/* <Menu as="div" className="relative inline-block text-left">
@@ -215,29 +309,71 @@ export default function Example() {
               </Menu> */}
 
              
-             {/* USERS MENU */}
+ {/* SUPPLIER MENU */}
               <Menu as="div" className="relative inline-block text-left">
                 <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
-                  Users
+                  Reports
                   <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
                 </MenuButton>
                 <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
 
                 <MenuItem as={Link}
-                  to="/user-center"
+                  to="/suppliers"
                   className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
                 >
-                  User Center
+                  Supplier Center
                 </MenuItem>
+
+                <MenuItem as={Link}
+                  to="/bills"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Bills
+                </MenuItem>
+
+                <MenuItem as={Link}
+                  to="/purchase_orders"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Purchase Orders
+                </MenuItem>
+
+               
               </MenuItems>
               </Menu> 
 
+                {/* SUPPLIER MENU */}
+              <Menu as="div" className="relative inline-block text-left">
+                <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
+                  Settings
+                  <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
+                </MenuButton>
+                <MenuItems className="absolute left-0 z-10 mt-2 w-44 origin-top-left rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10">
 
+                <MenuItem as={Link}
+                  to="/suppliers"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                  Supplier Center
+                </MenuItem>
 
+                <MenuItem as={Link}
+                  to="/bills"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Bills
+                </MenuItem>
 
+                <MenuItem as={Link}
+                  to="/purchase_orders"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                 Purchase Orders
+                </MenuItem>
 
-
-
+               
+              </MenuItems>
+              </Menu>  
 
 
                 {/* BANKING MENU */}
