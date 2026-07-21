@@ -432,7 +432,7 @@ export default function Example() {
 
 
              {/* USERS MENU */}
-              <Menu as="div" className="relative inline-block text-left">
+              {/* <Menu as="div" className="relative inline-block text-left">
                 <MenuButton className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white">
                   Users
                   <ChevronDownIcon aria-hidden="true" className="ml-1 h-4 w-4 text-gray-300" />
@@ -446,7 +446,7 @@ export default function Example() {
                   User Center
                 </MenuItem>
               </MenuItems>
-              </Menu>   
+              </Menu>    */}
           </div>
         </div>
       </div>
